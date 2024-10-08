@@ -427,7 +427,8 @@ img:hover {
   font-size: 15px;
 }
 
-.navbar-nav>li>a.primary-action{
+.navbar-nav>li>a.primary-action,
+.single_sidebar > a.primary-action{
   background-color: var(--secondary-color);
   border: 1px var(--secondary-color) solid;
   color: #000;
@@ -436,7 +437,13 @@ img:hover {
   text-align: center;
 }
 
-.navbar-nav>li>a.primary-action:hover{
+.single_sidebar > a.primary-action {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-nav>li>a.primary-action:hover,
+.single_sidebar > a.primary-action:hover{
   border: 1px var(--secondary-color) solid;
   color: var(--primary-color);
   font-weight: 600;
@@ -941,9 +948,10 @@ img:hover {
 }
 
 .left_content {
-  float: left;
-  display: inline;
-  width: 100%
+  /* float: left;
+  display: inline; */
+  width: 70%;
+  margin: 0 auto;
 }
 
 .single_post_content {
@@ -953,11 +961,11 @@ img:hover {
   margin-bottom: 20px
 }
 
-.single_post_content>h2 {
-  background: none repeat scroll 0 0 rgb(217, 255, 0);
-  color: #fff;
+.single_post_content>h2,
+.single_sidebar > h2 {
+  color: #d083cf;
   font-family: 'Oswald', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   margin-bottom: 10px;
   margin-left: 0;
@@ -1276,21 +1284,6 @@ figure.effect-layla:hover img {
   margin-bottom: 20px
 }
 
-.single_sidebar>h2 {
-  background: none repeat scroll 0 0 rgb(217, 255, 0);
-  color: #fff;
-  font-family: "Oswald", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  margin-left: 0;
-  margin-top: 5px;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase
-}
-
 .single_sidebar>h2 span {
   padding: 4px 10px
 }
@@ -1579,7 +1572,7 @@ figure.effect-layla:hover img {
   width: 70%;
   margin: 0 auto;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 20px
+  padding-bottom: 60px;
 }
 
 .single_page_content>img {
