@@ -119,5 +119,15 @@ $(document).ready(function() {
 		swfobject.embedSWF('piecemaker.swf', 'piecemaker', '1000', '600', '10', null, flashvars,    
 		params, null);
 	});
-	
+
+	window.onload = function () {
+		if ($('.count').length) {
+			console.log('count', $('.count').length)
+			$('.count').counterUp({
+				delay: 5,
+				time: 3000
+			});
+		}
+	}
+
 })(jQuery);
