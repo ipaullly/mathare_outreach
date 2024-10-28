@@ -19,7 +19,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 body {
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
+  background: white;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
@@ -380,11 +381,10 @@ img:hover {
   linear-gradient(to left, rgba(245, 246, 252, 0), var(--primary-color-light)),
   url('https://res.cloudinary.com/dtxfkulxg/image/upload/v1729073065/Pupils_po3ylj.jpg');
   width: 100%;
-  height: 700px;
+  height: 850px;
   background-size: cover;
   color: white;
   padding: 20px;
-  border-radius: 0 0 150px 150px;
 }
 
 .banner-image h1 {
@@ -431,7 +431,8 @@ img:hover {
 .navbar-nav>li>a.primary-action,
 .single_sidebar > a.primary-action,
 .landingArticle > a.primary-action,
-.landingVideo > .videoSection > .videoSectionRow > a.primary-action {
+.landingVideo > .videoSection > .videoSectionRow > a.primary-action,
+.aboutVideo > .videoSection > .singleVideo > a.primary-action {
   background-color: var(--secondary-color);
   border: 1px var(--secondary-color) solid;
   color: #000;
@@ -447,10 +448,18 @@ img:hover {
 }
 
 .landingArticle > a.primary-action,
-.landingVideo > .videoSection > .videoSectionRow > a.primary-action {
+.landingVideo > .videoSection > .videoSectionRow > a.primary-action,
+.aboutVideo > .videoSection > .singleVideo > a.primary-action {
   padding: 10px 25px;
+  max-width: 30%;
 }
 
+.aboutVideo > .videoSection > .singleVideo {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /* .landingArticle > a.primary-action {
   margin-top: 50px;
 } */
@@ -786,6 +795,139 @@ img:hover {
   align-items: center;
   margin-top: 60px;
 }
+/*****/
+/* ABOUT PAGE */
+/*****/
+
+#aboutUsUpper {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#aboutUsUpper .innerSection > div:first-child {
+  padding-right: 70px;
+}
+
+#aboutUsUpper .innerSection {
+  position: relative;
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#aboutUsUpper .innerSection h2 {
+  margin: 0;
+}
+
+#aboutUsUpper::before {   
+  content: "";
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: -0.3%;
+  /* left: 0; */
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 76vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  88' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 64L50 60C100 57 200 49 300 33C400 17 500 -7 600 1C700 9 800 49 900 64C1000 80 1100 72 1150 68L1200 64V88H1150C1100 88 1000 88 900 88C800 88 700 88 600 88C500 88 400 88 300 88C200 88 100 88 50 88H0V64Z' fill='%23e5e5e5'/></svg>");
+}
+
+.aboutVideo .videoSection {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+.aboutVideo .videoSection,
+.aboutApproach,
+.aboutResults,
+.aboutApproachMethods,
+.aboutStats,
+.aboutValues,
+.aboutCommunities,
+.aboutTeam,
+.aboutStory {
+  margin: 70px auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 80px; 
+}
+
+.aboutApproach p,
+.aboutResults p {
+  margin-top: 40px;
+}
+.aboutResults {
+  border-top: 3px dashed #f09d05;
+}
+.aboutApproachMethods{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e4e4e4;
+}
+.aboutApproachMethods > div {
+  margin-right: 30px;
+}
+.aboutStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 3px dashed #f09d05;
+}
+.aboutStats .counter-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+}
+.aboutStats .counter-cell .count {
+  font-size: 28px;
+}
+.aboutValues .values {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 60px;
+}
+.aboutValues .values span {
+  background-color: turquoise;
+  min-width: 30px;
+  min-height: 50px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.aboutCommunities .aboutSingleCommunity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutTeam .teamMembers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+} 
+.aboutTeam {
+  background-color: #e4e4e4;
+}
+.aboutTeam .teamMembers .card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
 /************************/
 /*     Testimonials     */
 /************************/
@@ -830,7 +972,8 @@ img:hover {
 	background-color: transparent;
 }
 
-.slider-1 .card-image {
+.slider-1 .card-image,
+.aboutTeam .card-image {
 	width: 96px;
 	height: 96px;
 	margin-right: auto;
@@ -839,11 +982,13 @@ img:hover {
 	border-radius: 50%;
 }
 
-.slider-1 .card-body {
+.slider-1 .card-body,
+.aboutTeam .card-body {
 	padding: 0;
 }
 
-.slider-1 .testimonial-author {
+.slider-1 .testimonial-author,
+.aboutTeam  .testimonial-author {
 	margin-bottom: 0;
 }
 .testimonials {
