@@ -616,13 +616,12 @@ img:hover {
 }
 
 .about_us_nav .media .image-left img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 .about_us_nav .media {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
   width: 240px;
 }
@@ -633,7 +632,16 @@ img:hover {
   align-items: center;
   justify-content: space-between;
 }
-.about_us_nav .media .media-body a,
+.about_us_nav .media .media-body a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 #allCentres .single-centre h4 {
   /* border-bottom: 1px solid var(--primary-color-light); */
   color: var(--secondary-color);
@@ -645,8 +653,10 @@ img:hover {
   flex-direction: column;
   justify-content: space-between;
 }
+.about_us_nav .media .media-body p {
+  text-align: center;
+}
 
-.about_us_nav .media .media-body p,
 #allCentres .single-centre p,
 .landingArticle p {
   font-size: 16px;
@@ -702,6 +712,7 @@ img:hover {
   width: 330px;
   height: 400px;
   padding: 30px;
+  margin-bottom: 20px;
   background-color: whitesmoke;
   border-radius: 20px;
   box-shadow: 2px -6px 55px 3px rgba(0,0,0,0.68);
@@ -2414,6 +2425,41 @@ figure.effect-layla:hover img {
   border: 1px solid #d083cf
 }
 
+@media(max-width:767px) {
+  .landingArticle > a.primary-action,
+  .landingVideo > .videoSection > .videoSectionRow > a.primary-action,
+  .aboutVideo > .videoSection > .singleVideo > a.primary-action {
+    padding: 10px 25px;
+    min-width: 100%;
+  } 
+  .approachSection .approachCards .approachCardsRow .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .approachSection .approachCards {
+    padding: 20px;
+  }
+
+  #aboutUsUpper .innerSection,
+  .aboutVideo .videoSection {
+    display: flex;
+    flex-direction: column; 
+  }
+  .aboutVideo .videoSection, 
+  .aboutApproach, .aboutResults, 
+  .aboutApproachMethods, .aboutStats, 
+  .aboutValues, .aboutCommunities, 
+  .aboutTeam, .aboutStory {
+    padding: 0;
+  }
+  .aboutVideo > .videoSection > .singleVideo {
+    width: 90%;
+  }
+  .aboutVideo > .videoSection > .singleVideo > iframe{
+    width: 400px;
+  }
+}
+
 @media(max-width:1199px) {
   .logo_area {
     width: 34%
@@ -2478,6 +2524,7 @@ figure.effect-layla:hover img {
   }
 
   @media(max-width:767px) {
+
     .navbar-collapse {
       padding-left: 15px;
       width: 100%;
