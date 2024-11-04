@@ -16,6 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --primary-color: #5FBAF5;
   --primary-color-light: #9FD6F9;
   --secondary-color: #F59A5F;
+  --secondary-color-light: #F59A5F40;
 }
 
 body {
@@ -432,7 +433,8 @@ img:hover {
 .single_sidebar > a.primary-action,
 .landingArticle > a.primary-action,
 .landingVideo > .videoSection > .videoSectionRow > a.primary-action,
-.aboutVideo > .videoSection > .singleVideo > a.primary-action {
+.aboutVideo > .videoSection > .singleVideo > a.primary-action,
+.ways__upper_right_donation > div > a.primary-action {
   background-color: var(--secondary-color);
   border: 1px var(--secondary-color) solid;
   color: #000;
@@ -449,7 +451,8 @@ img:hover {
 
 .landingArticle > a.primary-action,
 .landingVideo > .videoSection > .videoSectionRow > a.primary-action,
-.aboutVideo > .videoSection > .singleVideo > a.primary-action {
+.aboutVideo > .videoSection > .singleVideo > a.primary-action,
+.ways__upper_right_donation > div > a.primary-action {
   padding: 10px 25px;
   max-width: 30%;
 }
@@ -463,14 +466,16 @@ img:hover {
 /* .landingArticle > a.primary-action {
   margin-top: 50px;
 } */
-.landingVideo > .videoSection > .videoSectionRow > a.primary-action {
+.landingVideo > .videoSection > .videoSectionRow > a.primary-action,
+.ways__upper_right_donation > a.primary-action {
   margin-top: 40px;
 }
 
 .navbar-nav>li>a.primary-action:hover,
 .single_sidebar > a.primary-action:hover,
 .landingArticle > a.primary-action:hover,
-.landingVideo > .videoSection > .videoSectionRow > a.primary-action:hover {
+.landingVideo > .videoSection > .videoSectionRow > a.primary-action:hover,
+.ways__upper_right_donation > div > a.primary-action:hover {
   border: 1px var(--secondary-color) solid;
   color: var(--primary-color);
   font-weight: 600;
@@ -669,13 +674,15 @@ img:hover {
   width: 70%;
   margin: 0 auto; 
 }
-.allCentreCont {  
+.allCentreCont,
+.ways__middle_section {  
   background-color: #ffffff;
   position: relative;
   padding: 60px;
 }
 
-.allCentreCont::before {   
+.allCentreCont::before,
+.ways__middle_section::before {   
   content: "";
   width: 100%;
   height: 42px;
@@ -719,24 +726,26 @@ img:hover {
   -webkit-box-shadow: 2px -6px 55px 3px rgba(0,0,0,0.68);
   -moz-box-shadow: 2px -6px 55px 3px rgba(0,0,0,0.68);
 }
-.allCentreCont #allCentres .card {
+.allCentreCont #allCentres .card,
+.ways__middle_section #allCentres .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 250px;
-  height: 300px;
   padding: 30px;
   border-radius: 20px;
   border: 3px solid whitesmoke;
 }
-.allCentreCont #allCentres .card:hover {
+.allCentreCont #allCentres .card:hover,
+.ways__middle_section #allCentres .card:hover {
   transform: scale(1.05);
   transition: ease-in-out;
   border: 3px solid var(--primary-color);
 }
 
 .approachSection .approachCards .approachCardsRow .card .card-img-top,
-.allCentreCont #allCentres .card .card-img-top {
+.allCentreCont #allCentres .card .card-img-top,
+.ways__middle_section #allCentres .card .card-img-top {
   height: 150px;
   padding-bottom: 40px;
 }
@@ -938,6 +947,146 @@ img:hover {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+}
+/*********************/
+/*   WAYS TO GIVE    */
+/*********************/
+
+.ways__upper_section {
+  margin: 70px auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 80px; 
+}
+
+.ways__middle_section p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.ways__upper_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.ways__upper_section p,
+.ways__middle_section p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 30px;
+}
+
+.ways__upper_left {
+  max-width: 55%;
+}
+.ways__upper_left_child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ways__upper_left_child{
+  border: 4px solid var(--secondary-color-light);
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 20px 40px;
+}
+.ways__upper_left_donation_methods .methods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.ways__upper_right_donation{
+  padding-left: 30px;
+  text-align: center;
+}
+.ways__upper_right_donation .amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+.ways__upper_right_donation .amounts span {
+  border-radius: 15px;
+  border: 2px solid var(--secondary-color-light);
+  padding: 5px 10px;
+}
+.ways__input-box {
+  margin-top: 20px;
+  display: flex; /* Comment: Displays the container as a flex container */
+  align-items: center; /* Comment: Aligns items along the cross axis (vertically centered) */
+  max-width: 300px; /* Comment: Sets the maximum width of the container */
+  background: #CCC; /* Comment: Sets the background color of the container */
+  border: 1px solid #a0a0a0; /* Comment: Sets the border of the container */
+  border-radius: 15px; /* Comment: Sets the border radius to create rounded corners */
+  padding-left: 0.5rem; /* Comment: Adds left padding to the container */
+  overflow: hidden; /* Comment: Hides any content that overflows the container */
+  font-family: sans-serif; /* Comment: Sets the font family for the text inside the container */
+}
+
+.ways__input-box .prefix {
+  font-weight: 300; /* Comment: Sets the font weight of the prefix text */
+  font-size: 14px; /* Comment: Sets the font size of the prefix text */
+  color: #999; /* Comment: Sets the color of the prefix text */
+}
+
+.ways__input-box input {
+  flex-grow: 1; /* Comment: Allows the input field to grow to fill remaining space */
+  font-size: 14px; /* Comment: Sets the font size of the input text */
+  background: #fff; /* Comment: Sets the background color of the input field */
+  border: none; /* Comment: Removes the border of the input field */
+  outline: none; /* Comment: Removes the outline when input field is focused */
+  padding: 0.5rem; /* Comment: Adds padding to the input field */
+}
+
+.ways__input-box:focus-within {
+  border-color: #777; /* Comment: Changes the border color when the container or its children are focused */
+}
+
+.ways__middle_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 50px;
+  margin-top: 70px;
+}
+.ways__lower_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 50px;
+  margin: 70px auto;
+}
+
+.ways__lower_section #chartContainer .canvasjs-chart-credit{
+  display: none;
+}
+
+@media(max-width:767px) {
+  .ways__upper_section {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .ways__upper_left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .ways__upper_right_donation .amounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
 }
 /************************/
 /*     Testimonials     */
