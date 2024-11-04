@@ -958,6 +958,8 @@ img:hover {
   margin-right: auto;
   width: 80%;
   padding: 80px; 
+  display: flex;
+  flex-direction: row;
 }
 
 .ways__middle_section p {
@@ -983,6 +985,11 @@ img:hover {
 .ways__upper_left {
   max-width: 55%;
 }
+
+.ways__upper_right {
+  max-width: 45%;
+}
+
 .ways__upper_left_child {
   display: flex;
   flex-direction: row;
@@ -1086,6 +1093,117 @@ img:hover {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
+  }
+}
+
+/*******************************/
+/* Background Square Animation */
+/*******************************/
+
+.hero {
+  /* background-color: #0040C1; */
+  position: relative;
+  height: 50vh;
+  width: 350px;
+  /* overflow: hidden; */
+}
+
+.hero__title {
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 50px;
+  z-index: 1;
+}
+
+.cube {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  /* border: solid 1px #0ac10080; */
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(50px, 50px);
+  animation: cube 12s ease-in forwards infinite;
+}
+  
+.cube:nth-child(2n) {
+  border-color: #c18e0050;
+}
+
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 150px;
+  top: 100px;
+  transform-origin: bottom left;
+  background-color: #00acee;
+  animation: cube-opp 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  right: 75px;
+  top: 30px;
+  transform-origin: top right;
+  background-color: #c40505;
+}
+
+.cube:nth-child(4) {
+  animation-delay: 4s;
+  right: 90px;
+  top: 100px;
+  transform-origin: bottom right;
+  background-color: #e33b7e;
+  animation: cube-opp 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10px;
+  top: 8.5px;
+  transform-origin: top right;
+  background-color: #f09d05;
+  animation: cube-vrt 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 80px;
+  bottom: 10px;
+}
+
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50px, -50px);   
+    opacity: 1;
+  }
+  to {
+    transform: scale(10) rotate(60deg) translate(50px, 50px); 
+    opacity: 0;
+  }
+}
+@keyframes cube-opp {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50px, -50px);   
+    opacity: 1;
+  }
+  to {
+    transform: scale(10) rotate(-60deg) translate(50px, 50px); 
+    opacity: 0;
+  }
+}
+
+@keyframes cube-vrt {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50px, 50px);   
+    opacity: 1;
+  }
+  to {
+    transform: scale(10) rotate(0deg) translate(50px, 50px); 
+    opacity: 0;
   }
 }
 /************************/
