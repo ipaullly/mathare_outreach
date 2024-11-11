@@ -949,6 +949,65 @@ img:hover {
   margin-bottom: 20px;
 }
 /*********************/
+/*        BLOG       */
+/*********************/
+.blog-container {
+  /* background-color: #e1b70b; */
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.blog-card {
+  width: 27%;
+  margin: 25px;
+  background-color: #f5f3f3;
+  border-radius: 20px;
+}
+.blog-card > img {
+  width: 100%;
+}
+.blog-card > .blog-card-body {
+  padding: 20px;
+  text-align: center;
+}
+.blog-card > .blog-card-body > .primary-action {
+  padding: 10px 25px;
+  max-width: 30%;
+  margin-top: 20px;
+}
+.blog-card > .blog-card-body > .primary-action {
+  background-color: var(--secondary-color);
+  border: 1px var(--secondary-color) solid;
+  font-weight: 600;
+  border-radius: 15px;
+  text-align: center;
+}
+.blog-card > .blog-card-body > a.primary-action:hover {
+  border: 1px var(--secondary-color) solid;
+  font-weight: 600;
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+.blog-subscription {
+  text-align: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-top: 2px solid var(--secondary-color-light);
+}
+.blog-subscription .subscription-form{
+  margin-top: 50px;
+}
+
+.blog-subscription .subscription-form .searchInput,
+.blog-subscription .subscription-form .searchBtn{
+  padding: 10px 20px;
+}
+/*********************/
 /*   WAYS TO GIVE    */
 /*********************/
 
@@ -2725,8 +2784,19 @@ figure.effect-layla:hover img {
   .aboutVideo > .videoSection > .singleVideo > iframe{
     width: 400px;
   }
+  .blog-card {
+    width: 40%;
+  }
 }
 
+@media(max-width:991px) {
+
+}
+@media(max-width:480px) {
+  .blog-card {
+    width: 100%;
+  }
+}
 @media(max-width:1199px) {
   .logo_area {
     width: 34%
